@@ -53,7 +53,7 @@ export default function App() {
 
       <main className="content">
         <section id="about" className="section">
-          <h2>About Me</h2>
+          <h2>About </h2>
           <p>
             Around 10+ years of experience in Information Technology in Software Development for Web & Mobile Applications and TV environments.
             Expertise in JavaScript, TypeScript, React, React Native, Angular, and related technologies.
