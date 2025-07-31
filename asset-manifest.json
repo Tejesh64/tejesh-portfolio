@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tejesh-portfolio/static/css/main.8e310e41.css",
-    "main.js": "/tejesh-portfolio/static/js/main.2d0e8e82.js",
+    "main.js": "/tejesh-portfolio/static/js/main.4cb66e6c.js",
     "static/js/453.39f02e6f.chunk.js": "/tejesh-portfolio/static/js/453.39f02e6f.chunk.js",
     "index.html": "/tejesh-portfolio/index.html",
     "main.8e310e41.css.map": "/tejesh-portfolio/static/css/main.8e310e41.css.map",
-    "main.2d0e8e82.js.map": "/tejesh-portfolio/static/js/main.2d0e8e82.js.map",
+    "main.4cb66e6c.js.map": "/tejesh-portfolio/static/js/main.4cb66e6c.js.map",
     "453.39f02e6f.chunk.js.map": "/tejesh-portfolio/static/js/453.39f02e6f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e310e41.css",
-    "static/js/main.2d0e8e82.js"
+    "static/js/main.4cb66e6c.js"
   ]
 }
