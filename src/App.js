@@ -1,126 +1,102 @@
-// src/App.js
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 
-export default function App() {
-  const [activeSection, setActiveSection] = useState("about");
-
-  const handleNavClick = (id) => {
-    setActiveSection(id);
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+function App() {
   return (
-    <div className="app">
+    <div className="app-container">
       <aside className="sidebar">
-        <div className="sidebar-header">
-          <h1>Tejesh Kumar</h1>
-          <p>Senior Software Engineer</p>
-          <p className="contact">📞 510-556-7379 | 📧 Tejeshkumar209@gmail.com</p>
+        <img
+          src={`${process.env.PUBLIC_URL}/images/tejesh.jpeg`}
+          alt="Tejesh Kumar"
+          className="profile-pic"
+        />
+        <h1 className="name">Tejesh Kumar</h1>
+        <p className="title">Senior Software Engineer</p>
+        <div className="contact-info">
+          <p>📞 510-556-7379</p>
+          <p>✉️ Tejeshkumar209@gmail.com</p>
         </div>
-        <nav className="nav">
-          <ul>
-            <li
-              className={activeSection === "about" ? "active" : ""}
-              onClick={() => handleNavClick("about")}
-            >
-              About
-            </li>
-            <li
-              className={activeSection === "skills" ? "active" : ""}
-              onClick={() => handleNavClick("skills")}
-            >
-              Skills
-            </li>
-            <li
-              className={activeSection === "work" ? "active" : ""}
-              onClick={() => handleNavClick("work")}
-            >
-              Work Experience
-            </li>
-            <li
-              className={activeSection === "education" ? "active" : ""}
-              onClick={() => handleNavClick("education")}
-            >
-              Education
-            </li>
-          </ul>
+        <nav className="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
         </nav>
       </aside>
 
-      <main className="content">
+      <main className="main-content">
         <section id="about" className="section">
-          <h2>About </h2>
+          <h2>About Me</h2>
           <p>
-            Around 10+ years of experience in Information Technology in Software Development for Web & Mobile Applications and TV environments.
-            Expertise in JavaScript, TypeScript, React, React Native, Angular, and related technologies.
-          </p>
-          <p>
-            Skilled in sprint planning, Agile methodologies, RESTful APIs, React Hooks, Redux, and mobile development using React Native.
+            10+ years experience in Software Development for Web, Mobile, and TV
+            platforms specializing in React, React Native, Angular, Node.js and more.
           </p>
         </section>
 
         <section id="skills" className="section">
           <h2>Technical Skills</h2>
           <ul>
-            <li>JavaScript (ES6+), TypeScript, React.js, React Native, Redux, AngularJS</li>
-            <li>Node.js, REST APIs, RxJS, Redux-Saga</li>
-            <li>HTML5, CSS3, SASS, Bootstrap</li>
-            <li>Java (Core, 8, 11), C, C++</li>
-            <li>Testing: Jest, Jasmine, Cypress</li>
-            <li>Version Control: Git, GitHub, SVN</li>
-            <li>Tools: Webpack, Babel, Visual Studio, WebStorm, JIRA</li>
-            <li>Cloud: AWS, Kubernetes</li>
+            <li>React, Redux, Angular, Node.js, JavaScript, TypeScript</li>
+            <li>Java, C, C++</li>
+            <li>Git, JIRA, Jenkins, AWS, Kubernetes</li>
+            <li>Testing with Jest, Jasmine, Cypress</li>
+            <li>SQL, MongoDB, Mode Analytics</li>
           </ul>
         </section>
 
-        <section id="work" className="section">
+        <section id="experience" className="section">
           <h2>Work Experience</h2>
 
-          <article className="job">
-            <h3>Senior Software Engineer – Pluto TV, Los Angeles, CA</h3>
-            <p className="date">June 2021 – Present</p>
+          <article>
+            <h3>Senior Software Engineer - Pluto TV (Jun 2021 - Present)</h3>
             <ul>
-              <li>Built high performance apps using React, Redux, Redux-Saga, TypeScript, SASS.</li>
-              <li>Developed cross-platform mobile apps with React Native.</li>
-              <li>Worked on platforms like LGWebOS, Hisense Vidaa+, Watch Free+.</li>
-              <li>Integrated REST APIs and used tools like Mode Analytics, Jest, Cypress.</li>
+              <li>React, Redux, Redux-saga, Typescript development</li>
+              <li>Cross-platform mobile apps using React Native</li>
+              <li>Agile methodology and JWT token management</li>
             </ul>
           </article>
 
-          <article className="job">
-            <h3>Front End Developer – CEA, Sacramento, CA</h3>
-            <p className="date">Jan 2020 – May 2021</p>
+          <article>
+            <h3>Front End Developer - CEA (Jan 2020 – May 2021)</h3>
             <ul>
-              <li>Designed web pages using React, Redux, TypeScript, SASS, and Bootstrap.</li>
-              <li>Developed SPA with React and migrated modules to Angular 9.</li>
-              <li>Implemented RESTful services with Redux-Promise.</li>
+              <li>React, Redux, Flux, Bootstrap development</li>
+              <li>Angular 9 module migration</li>
             </ul>
           </article>
 
-          <article className="job">
-            <h3>Front End Developer – Universal Music Group, Los Angeles, CA</h3>
-            <p className="date">May 2019 – Dec 2019</p>
+          <article>
+            <h3>Front End Developer - Universal Music Group (May 2019 - Dec 2019)</h3>
             <ul>
-              <li>Built responsive UI components with Bootstrap, SASS, Redux.</li>
-              <li>Developed MERN stack applications and automated builds using Jenkins.</li>
+              <li>MERN stack development</li>
+              <li>UI components with Bootstrap and Angular Material</li>
             </ul>
           </article>
 
-          {/* Add more jobs similarly if needed */}
+          <article>
+            <h3>Front End Developer - Herbalife Nutrition (Jul 2018 - Apr 2019)</h3>
+            <ul>
+              <li>Mobile apps using React Native and Redux</li>
+              <li>Debugging with Reactotron and Redux DevTools</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Web Developer - Hindustan Unilever Limited (Apr 2014 - Dec 2015)</h3>
+            <ul>
+              <li>Frontend development with HTML, CSS, JavaScript, jQuery</li>
+              <li>Full SDLC involvement</li>
+            </ul>
+          </article>
         </section>
 
-        <section id="education" className="section">
-          <h2>Education</h2>
-          <ul>
-            <li>Bachelor of Technology Engineering - Jawaharlal Nehru Technological University, 2014</li>
-            <li>Master’s in Computer Information Systems - New England College, 2018</li>
-          </ul>
+        <section id="contact" className="section">
+          <h2>Contact</h2>
+          <p>Phone: 510-556-7379</p>
+          <p>Email: Tejeshkumar209@gmail.com</p>
         </section>
       </main>
     </div>
   );
 }
+
+export default App;
